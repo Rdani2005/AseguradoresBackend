@@ -25,6 +25,11 @@ Ejemplo (Beneficiary.Service/appsettings.json):
 ## 3. Actualizar la Base de Datos
 ```bash
 # Para Beneficiary.Service
+
+## Datos de cosas por hacer
+En el codigo, tenemos que modificar el contacto entre las APIs, por el contrario a como estan, deberian de estar dentro del App Settings.
+
+Adicional, se debe planificar en una forma de enviarlo a produccion, y que este sea optimo, a futuro, se podria adjuntar un DockerImage, o Kubernetes
 cd Beneficiary.Service
 Update-Database
 
