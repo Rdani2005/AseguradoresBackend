@@ -11,7 +11,7 @@ namespace Beneficiary.Service.Data
             
         }
 
-        public DbSet<Insured> Insuranceds { get; set; }
+        public DbSet<Insured> Insuranced { get; set; }
         public DbSet<Insurance> Insurances { get; set; }
         public DbSet<InsuranceInsured> InsuredInsurances { get; set; }
 

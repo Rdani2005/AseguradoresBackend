@@ -18,10 +18,27 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<IInsuranceService, InsurancesService>();
 builder.Services.AddScoped<IInsuredService, InsuredService>();
+builder.Services.AddScoped<IExcelService, ExcelService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+// Habilitar el CORS. DESACTIVAR ESTA CONFIGURACION EN PRODUCCION
+builder.Services.AddCors(
+    options =>
+    {
+        options.AddPolicy("AllowAnyOrigin",
+            builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            });
+    }
+);
+
 
 var app = builder.Build();
 
@@ -31,6 +48,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowAnyOrigin");
 
 app.UseHttpsRedirection();
 

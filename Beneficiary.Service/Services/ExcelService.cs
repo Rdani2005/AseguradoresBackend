@@ -6,7 +6,7 @@ namespace Beneficiary.Service.Services
 {
     public class ExcelService : IExcelService
     {
-        public List<AddInsuredDto> ReadInsuredDataFromExcel(byte[] excelFile)
+        public List<AddInsuredDto> ReadInsuranceDataFromExcel(byte[] excelFile)
         {
             var insuranceList = new List<AddInsuredDto>();
 

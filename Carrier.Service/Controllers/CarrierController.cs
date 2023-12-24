@@ -115,7 +115,7 @@ namespace Carrier.Service.Controllers
             }
             catch (Exception ex)
             {
-                // Manejo de errores, puedes personalizar esto según tus necesidades
+                // Manejo de errores
                 return StatusCode(500, $"--> Internal server error: {ex.Message}");
             }
         }
