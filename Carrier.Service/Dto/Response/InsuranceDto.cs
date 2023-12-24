@@ -1,0 +1,11 @@
+﻿namespace Carrier.Service.Dto.Response
+{
+    public class InsuranceDto
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string CarrierCode { get; set; }
+        public decimal Assured { get; set; }
+        public decimal Bonus { get; set; }
+    }
+}
