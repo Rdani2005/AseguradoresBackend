@@ -41,3 +41,9 @@ Update-Database
 ## Estructura del Proyecto
 1. Beneficiary.Service: Microservicio encargado de gestionar los beneficiarios.
 2. Carrier.Service: Microservicio encargado de gestionar los transportistas.
+
+
+## Cambios a realizar
+1. Se debe desarrollar un ambiente de Pruebas y de Produccion.
+2. Se deberia poder poner las APIs a consultar en el App Settings, debido a que se estan consultando directamente, esto para comunicacion por HTTPS para los microservicios.
+3. Incluir a futuro un bus de mensajes, para pasar a algo asincrono.
