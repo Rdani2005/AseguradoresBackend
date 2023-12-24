@@ -43,6 +43,24 @@ Update-Database
 2. Carrier.Service: Microservicio encargado de gestionar los transportistas.
 
 
+## Datos importantes
+Por defecto, ambos microservicios van a correr en los puertos `localhost:5000` y `localhost:6000`. En Https estos van a correr en los puertos: `localhost:5001` y `localhost:6001`. Esto puede ser modificado en el archivo `Service/Properties/launchSettings.json`, correspondiente a ambos microservicios.
+
+```json
+...
+  "profiles": {
+    "Beneficiary.Service": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:6001;http://localhost:6000", // Aqui se pueden modificar los puertos
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+...
+```
 ## Cambios a realizar
 1. Se debe desarrollar un ambiente de Pruebas y de Produccion.
 2. Se deberia poder poner las APIs a consultar en el App Settings, debido a que se estan consultando directamente, esto para comunicacion por HTTPS para los microservicios.
